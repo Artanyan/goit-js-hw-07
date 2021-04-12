@@ -8,7 +8,7 @@ const ingredients = [
   ];
 
 
-const element = document.querySelector('#ingredients');
+const productElement = document.querySelector('#ingredients');
 
 const product = ingredient => {
   
@@ -18,6 +18,6 @@ const product = ingredient => {
 };
 
 const elements = ingredients.map(product);
-    element.append(...elements);
+productElement.append(...elements);
     
-    console.log(element);
+    console.log(productElement);
