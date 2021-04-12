@@ -1,15 +1,15 @@
-const inputRef = document.querySelector('#validation-input');
-inputRef.addEventListener('blur', checkInput);
+const inputEl = document.querySelector('#validation-input');
+inputEl.addEventListener('blur', checkInput);
 
 function checkInput(e) {
 
   const numberEvent = e.target.value.length;
-  const numberRef = Number(inputRef.getAttribute('data-length'));
+  const numberEl = Number(inputEl.getAttribute('data-length'));
   
-  numberEvent === numberRef
-    ? (inputRef.className = 'valid')
-    : (inputRef.className = 'invalid');
+  numberEvent === numberEl
+    ? (inputEl.className = 'valid')
+    : (inputEl.className = 'invalid');
   if (numberEvent === 0) {
-    inputRef.className = '';
+    inputEl.className = '';
   }
 }
